@@ -24,7 +24,7 @@ const LeftCard = () => {
             </div>
             {/* I havent use map because data is coming as a object  */}
             <div className="w-full h-fit  lg:scale-100 absolute top-1/6 lg:top:1/6 gap-1  flex flex-wrap items-center justify-center ">
-                {data && (
+            {data && (
                     <>
                         <Card value={data.main.temp} icon={data.weather[0].icon} symbol="°C" name={data.name} />
                         <Card value={data.main.humidity} icon={data.weather[0].icon} symbol="%" name="Humidity" />

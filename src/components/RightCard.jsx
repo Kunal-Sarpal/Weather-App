@@ -32,6 +32,7 @@ const RightCard = () => {
 
     return (
         <div className="lg:w-1/2  h-full lg:p-2 flex flex-col items-center">
+           
             {/*  This is navbar  */}
             <div className="flex relative scale-90 w-full mt-10 md:mt-0">
                 <input
@@ -68,6 +69,13 @@ const RightCard = () => {
                         ))}
                     </div>
             </div>
+
+            <button
+                onClick={() => dispatch(asyncGetData(city))}
+                className=" border-2 bg-white   text-zinc-700 text-md p-3   duration-150 ease-in-out border-zinc-500  rounded-md px-6"
+            >
+                Refresh
+            </button>
         </div>
     );
 };

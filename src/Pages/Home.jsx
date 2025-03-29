@@ -2,6 +2,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { asyncGetData } from '../store/actions/getData';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 import LeftCard from '../components/LeftCard';
 import RightCard from '../components/RightCard';
@@ -19,11 +21,11 @@ const Home = () => {
     return (
 
         <> 
+        <ToastContainer position="top-right" autoClose={3000} />
         {   
-            
             data && <div className="w-full pt-20 lg:pt-20 lg:p-20 h-screen  bg-[#E9E9E9] relative  shadow-black select-none">
                    {/* Display date and time on screen */}
-                    <DateAndTime /> 
+                    <DateAndTime />  
 
                     {/* If user enters invalid city then this error pop up */}
                     {error && <ErrorMsg msg={error.includes("404") ? "City Not Found" : error} />}

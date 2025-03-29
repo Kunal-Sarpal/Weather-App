@@ -2,6 +2,7 @@ import { keys } from "../../apiKeys";
 import { getData,setError,setWeatherMessage } from "../slices/DataSlice";
 import { getWeatherMessage } from "../../utils/WeatherDescriptions";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 
 // this function is used to dispatch the action to get the data from the api
@@ -16,12 +17,13 @@ export const asyncGetData = (city) => async (dispatch) => {
     try {
         console.log("in asyncGetData")
         const response = await axios.get(`${keys.base}?q=${city}&appid=${keys.key}&units=metric`);
-        dispatch(getData(response.data));
-        const getMsg = getWeatherMessage(response.data.weather[0].main)
-        dispatch(setWeatherMessage(getMsg))
+
+            dispatch(getData(response.data));
+            const getMsg = getWeatherMessage(response.data.weather[0].main)
+            dispatch(setWeatherMessage(getMsg))
 
 
-        
+        toast.success("Weather data fetched successfully!");
         const newEntry = { city, weather: response.data };
         let storedSearches = JSON.parse(localStorage.getItem("recentSearches")) || [];
         const cityExists = storedSearches.some((entry) => entry.city === city);
