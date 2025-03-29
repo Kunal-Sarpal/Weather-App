@@ -12,7 +12,7 @@ const Home = () => {
     // console.log(data)
     useEffect(() => {
         // console.log("mounted")
-        // dispatch(asyncGetData("punjab"))
+        dispatch(asyncGetData("punjab"))
     }, [])
     return (
 
