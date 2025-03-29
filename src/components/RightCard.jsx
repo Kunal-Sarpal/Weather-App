@@ -15,7 +15,7 @@ const RightCard = () => {
 
     function filterResponse(cityName) {
         const invalidChars = /[0-9]/;
-        if (cityName.trim() === "" || cityName.length > 10 || invalidChars.test(cityName)) {
+        if (cityName.trim() === "" || cityName.length > 10 || invalidChars.test(cityName) || cityName[0] == cityName[1]) {
             setVisible(true);
         } else {
             setVisible(false);
@@ -33,13 +33,13 @@ const RightCard = () => {
 
     return (
         <div className="lg:w-1/2  h-full lg:p-2 flex flex-col items-center">
-            <div className="flex relative scale-90 w-full">
+            <div className="flex relative scale-90 w-full mt-10 md:mt-0">
                 <input
                     type="text"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                     placeholder="Enter city name..."
-                    className="w-full text-md border p-3 outline-none border-zinc-300 shadow rounded-md px-6 text-zinc-600"
+                    className="w-full  text-md border p-3 font-normal outline-none border-zinc-300  rounded-md px-6 text-zinc-600"
                 />
                 <button
                     onClick={() => filterResponse(city)}
