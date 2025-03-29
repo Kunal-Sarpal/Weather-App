@@ -7,7 +7,7 @@ const Card = ({ icon, symbol, name, value }) => {
         <div className=' w-52 h-52  border-l-2  border-b-2  border-black backdrop-blur-2xl bg-black/50 shadow-xl   rounded  '>
             <div className='flex justify-center items-center'>
                 {icon && <img className='object-cover ' src={`https://openweathermap.org/img/wn/${icon}.png`} />}  
-                
+
                 <h1 className='text-xl border-black/50    text-white font-mono   text-center '>{name}</h1>
             </div>
 

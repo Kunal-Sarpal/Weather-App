@@ -12,7 +12,7 @@ const LeftCard = () => {
     }
 
     return (
-        <div className="w-1/2 h-full flex justify-center items-center bg-zinc-800 relative">
+        <div className="lg:w-1/2  w-full h-full flex justify-center items-center bg-zinc-800 relative">
             <div className="w-full h-full bg-amber-200 ">
                 <img
                     className="object-cover w-full bg-blend-color-dodge"
@@ -20,7 +20,7 @@ const LeftCard = () => {
                     alt="Weather Background"
                 />
             </div>
-            <div className="w-full absolute top-1/6 gap-1  flex flex-wrap justify-center items-center">
+            <div className="w-full  scale-90 lg:scale-100 absolute top-1/6 gap-1  flex flex-wrap justify-center items-center">
                 {data && (
                     <>
                         <Card value={data.main.temp} icon={data.weather[0].icon} symbol="°C" name={data.name} />

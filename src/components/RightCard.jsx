@@ -32,7 +32,7 @@ const RightCard = () => {
     },[visible])
 
     return (
-        <div className="w-1/2 h-full p-2 flex flex-col items-center">
+        <div className="lg:w-1/2  h-full lg:p-2 flex flex-col items-center">
             <div className="flex relative scale-90 w-full">
                 <input
                     type="text"
@@ -58,7 +58,7 @@ const RightCard = () => {
 
             <div className="mt-4 w-full">
                 <h2 className="text-lg font-semibold text-blue-500  pl-8 ">Recent Searches</h2>
-                    <div className="flex flex-wrap scale-75 gap-2">
+                    <div className="flex flex-wrap scale-75 w-fit">
                     {recentData.map((data, index) => (
                         <Card key={index} name={data.city} value={data.weather.main.temp} symbol={"°C"} icon={data.weather.weather[0].icon} />
                         ))}

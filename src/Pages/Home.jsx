@@ -12,16 +12,16 @@ const Home = () => {
     // console.log(data)
     useEffect(() => {
         // console.log("mounted")
-        dispatch(asyncGetData("punjab"))
+        // dispatch(asyncGetData("punjab"))
     }, [])
     return (
 
         <>
         {
-            data && <div className="w-full p-20 h-screen  bg-[#E9E9E9] relative  shadow-black select-none">
+            data && <div className="w-full pt-20 lg:pt-20 lg:p-20 h-screen  bg-[#E9E9E9] relative  shadow-black select-none">
                     <DateAndTime/>
                     <div className="w-full h-full shadow-xl shadow-zinc-300">
-                        <div className="w-full overflow-hidden  flex h-full bg-white items-center rounded">
+                        <div className="w-full lg:flex h-full bg-white items-center rounded">
                             <LeftCard />
                             <RightCard />
                         </div>
