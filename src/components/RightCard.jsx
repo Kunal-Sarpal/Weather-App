@@ -72,10 +72,13 @@ const RightCard = () => {
 
             <button
                 onClick={() => dispatch(asyncGetData(city))}
-                className=" border-2 bg-white   text-zinc-700 text-md p-3   duration-150 ease-in-out border-zinc-500  rounded-md px-6"
+                className="border border-zinc-500 scale-100 hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out
+               bg-white/20 backdrop-blur-lg shadow-lg text-zinc-700 text-md font-extrabold 
+               py-3 px-6 rounded-lg hover:bg-white/30 "
             >
-                Refresh
+                Refresh Weather
             </button>
+
         </div>
     );
 };
