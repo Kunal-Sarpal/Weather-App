@@ -1,18 +1,16 @@
-# Weather App 🌦️
+# Weather App ☂️
 
-The Weather App is a sleek and intuitive web application built with React, Redux, and Tailwind CSS that allows users to fetch real-time weather information for different cities. Designed for efficiency, the app enhances the user experience with features like search history tracking, error handling, and responsive design.
-
-It utilizes localStorage with a queue data structure to store and manage the last 5 searched cities, ensuring quick access to recent queries. The app also leverages React Toastify for smooth, interactive notifications, keeping users informed of search updates and errors.
-
-Whether you’re checking today’s weather or reviewing past searches, the Weather App offers a seamless and user-friendly experienc
+This is a weather application built with **React, Redux, and Tailwind CSS** that fetches and displays weather information for different cities. The app saves recent searches using `localStorage` and a **queue data structure** to maintain the last 5 searches. It also includes error handling for invalid inputs and API failures.
 
 ## Features 🚀
-- Fetches real-time weather data
-- Displays temperature, humidity, and weather conditions
-- Stores recent searches (max 5) in `localStorage`
-- Responsive UI using **Tailwind CSS**
-- Error handling for invalid city names
-- Date and Time display using `moment.js`
+- **Real-time weather data** from OpenWeatherMap API
+- Displays **temperature, humidity, and weather conditions**
+- Saves recent searches (max **5**) using `localStorage`
+- **Queue-based search history management**
+- **Responsive UI** using Tailwind CSS
+- **Error handling** for invalid city names or API failures
+- **Date and Time display** using `moment.js`
+- **Toast notifications** using `react-toastify`
 
 ---
 
@@ -38,7 +36,7 @@ The app will run on `http://localhost:3000` by default.
 
 ---
 
-## 🏗️ Project Structure
+## 🏢 Project Structure
 ```
 /weather-app
 │── /src
@@ -57,39 +55,50 @@ The app will run on `http://localhost:3000` by default.
 │   ├── index.js
 │── package.json
 │── README.md
-
 ```
-## 🌐 API Used
-The app fetches weather data from the **OpenWeatherMap API**.
 
-> **Note:** To use this app, get a free API key from [OpenWeatherMap](https://openweathermap.org/) and add it to your environment variables.
+---
 
+## 🌐 API Usage
+This app fetches weather data from the **OpenWeatherMap API**.
+
+> **Important:** You need an API key from [OpenWeatherMap](https://openweathermap.org/) to use this application.
+
+### Steps to Get an API Key:
+1. Sign up at [OpenWeatherMap](https://openweathermap.org/)
+2. Get a free API key from the dashboard
+3. Add the API key to your `.env` file:
 ```sh
 REACT_APP_WEATHER_API_KEY=your_api_key_here
 ```
 
+### Rate Limits
+The free OpenWeatherMap API has rate limits:
+- **60 requests per minute** (free plan)
+- Higher limits available for **paid plans**
+
 ---
-
-
 
 ## 🛠️ Tech Stack
-- **React** (Frontend UI)
-- **Redux** (State Management)
-- **Tailwind CSS** (Styling)
-- **Moment.js** (Date & Time Formatting)
-- **OpenWeatherMap API** (Weather Data)
+- **React** - Frontend UI
+- **Redux** - State management
+- **Tailwind CSS** - Styling
+- **Moment.js** - Date & time formatting
+- **React Toastify** - Notifications
+- **OpenWeatherMap API** - Weather data
 
 ---
 
-## 📜 License
+## 🗃️ License
 This project is open-source and available under the **MIT License**.
 
 ---
 
-## 🤝 Contributing
-Feel free to fork the repo, create a new branch, and submit a pull request! 🙌
+## 👍 Contributing
+Want to improve this project? Feel free to **fork**, **create a branch**, and **submit a pull request**! 🚀
 
 ---
 
-## 📞 Contact
+## 📱 Contact
 For any queries, reach out at [your-email@example.com](mailto:sarpalkunal7@gmail.com).
+
