@@ -54,6 +54,7 @@ The app will run on `http://localhost:3000` by default.
 │── package.json
 │── README.md
 
+```
 ## 🌐 API Used
 The app fetches weather data from the **OpenWeatherMap API**.
 
