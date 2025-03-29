@@ -6,12 +6,14 @@ const LeftCard = () => {
 
 
     const data = useSelector(state => state.data.data)
-    console.log(data)
+
     if (!data) {
         return <div className="w-1/2 h-full flex justify-center items-center bg-zinc-800">Loading...</div>;
     }
 
     return (
+        // In this section we are showing the data of the first card
+
         <div className="lg:w-1/2  w-full h-full flex justify-center items-center bg-zinc-800 relative">
             <div className="w-full h-full bg-amber-200 ">
                 <img
@@ -20,6 +22,7 @@ const LeftCard = () => {
                     alt="Weather Background"
                 />
             </div>
+            {/* I havent use map because data is coming as a object  */}
             <div className="w-full h-fit  lg:scale-100 absolute top-1/6 lg:top:1/6 gap-1  flex flex-wrap items-center justify-center ">
                 {data && (
                     <>

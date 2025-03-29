@@ -21,7 +21,6 @@ const RightCard = () => {
             setVisible(false);
             setCity(cityName);
             dispatch(asyncGetData(cityName));
-    
         }
     }
 
@@ -29,33 +28,38 @@ const RightCard = () => {
         const prevdata = localStorage.getItem('recentSearches')
         const convertedData = JSON.parse(prevdata);
         setRecentData(convertedData);
-    },[visible])
+    },[city])
 
     return (
         <div className="lg:w-1/2  h-full lg:p-2 flex flex-col items-center">
+            {/*  This is navbar  */}
             <div className="flex relative scale-90 w-full mt-10 md:mt-0">
                 <input
                     type="text"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                     placeholder="Enter city name..."
-                    className="w-full  text-md border p-3 font-normal outline-none border-zinc-300  rounded-md px-6 text-zinc-600"
+                    className="w-full hover:outline outline-0 hover:outline-blue-500  accent-violet-300 text-md border p-3 font-normal  border-zinc-300  rounded-md px-6 text-zinc-600"
                 />
                 <button
                     onClick={() => filterResponse(city)}
-                    className="border bg-zinc-700 text-md text-white active:scale-110 duration-150 ease-in-out border-zinc-300 absolute right-0 h-full rounded-r-xl px-6"
+                    className="border bg-zinc-700 text-md text-white active:scale-110 duration-150 ease-in-out border-zinc-300 absolute right-0 h-full rounded-r-md px-6"
                 >
                     Search
                 </button>
             </div>
 
+            {/* Before sending request to api we will filter the input */}
             {visible && <ErrorMsg msg={"Invalid city name"}/>}
 
 
+            {/* Interactive message will be shown here */}
             <div className="text-3xl mt-2 text-zinc-800 tracking-tight font-extrabold px-8">
                 {msg && msg}
             </div>
 
+
+            {/* Past serached cities. */}
             <div className="mt-4 w-full">
                 <h2 className="text-lg font-semibold text-blue-500  pl-8 ">Recent Searches</h2>
                     <div className="flex flex-wrap scale-75 w-fit">
