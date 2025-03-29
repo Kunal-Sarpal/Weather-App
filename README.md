@@ -27,7 +27,7 @@ npm install
 
 ### 3️⃣ Start the Development Server
 ```sh
-npm start
+npm run dev
 ```
 
 The app will run on `http://localhost:3000` by default.
@@ -39,21 +39,20 @@ The app will run on `http://localhost:3000` by default.
 /weather-app
 │── /src
 │   ├── /components
-│   │   ├── Card.js
-│   │   ├── DateAndTime.js
-│   │   ├── LeftCard.js
-│   │   ├── RightCard.js
-│   │   ├── ErrorMsg.js
+│   │   ├── Card.jsx
+│   │   ├── DateAndTime.jsx
+│   │   ├── LeftCard.jsx
+│   │   ├── RightCard.jsx
+│   │   ├── ErrorMsg.jsx
 │   ├── /store
-│   │   ├── actions/getData.js
-│   │   ├── reducers/weatherReducer.js
+│   │   ├── actions/getData.jsx
+│   │   ├── reducers/weatherReducer.jsx
+│   ├── /pages
+│   │   ├── Home.jsx
 │   ├── App.js
 │   ├── index.js
 │── package.json
 │── README.md
-```
-
----
 
 ## 🌐 API Used
 The app fetches weather data from the **OpenWeatherMap API**.
@@ -66,21 +65,7 @@ REACT_APP_WEATHER_API_KEY=your_api_key_here
 
 ---
 
-## 🔧 Available Scripts
 
-### Start Development Server
-```sh
-npm start
-```
-Runs the app in development mode at `http://localhost:3000/`.
-
-### Build for Production
-```sh
-npm run build
-```
-Creates a production-ready build in the `/build` folder.
-
----
 
 ## 🛠️ Tech Stack
 - **React** (Frontend UI)
@@ -102,4 +87,4 @@ Feel free to fork the repo, create a new branch, and submit a pull request! 🙌
 ---
 
 ## 📞 Contact
-For any queries, reach out at [your-email@example.com](mailto:your-email@example.com).
+For any queries, reach out at [your-email@example.com](mailto:sarpalkunal7@gmail.com).
