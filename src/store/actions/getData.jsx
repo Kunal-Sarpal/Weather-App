@@ -23,8 +23,9 @@ export const asyncGetData = (city) => async (dispatch) => {
             dispatch(setWeatherMessage(getMsg))
 
 
-        toast.success("Weather data fetched successfully!");
-        const newEntry = { city, weather: response.data };
+            toast.success("Weather data fetched successfully!");
+            // This is storing curr seracherd to localStorage and removing the first element if size is greater than 5
+            const newEntry = { city, weather: response.data };
         let storedSearches = JSON.parse(localStorage.getItem("recentSearches")) || [];
         const cityExists = storedSearches.some((entry) => entry.city === city);
         if (!cityExists) {

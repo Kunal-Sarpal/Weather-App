@@ -1,5 +1,9 @@
 import React from "react";
 
+
+// Here i have use class component because if like server will down or any error will occur then we can use this component to show error to user it will not let the website down
+// .
+
 class ErrorBoundary extends React.Component {
     constructor(props) {
         super(props);

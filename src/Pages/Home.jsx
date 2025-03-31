@@ -32,6 +32,7 @@ const Home = () => {
     return (
 
         <> 
+       
         <ToastContainer position="top-right" autoClose={3000} />
         {   
             data && <div className="w-full pt-20 lg:pt-20 lg:p-20 h-screen  bg-[#E9E9E9] relative  shadow-black select-none">

@@ -8,9 +8,9 @@ import ErrorBoundary from './ErrorBoundary.jsx'
 
 createRoot(document.getElementById('root')).render(
   <ErrorBoundary>
-  <Provider store={store}>
+    <Provider store={store}>
 
-    <App />
-  </Provider>
+      <App />
+    </Provider>
   </ErrorBoundary>
 )
