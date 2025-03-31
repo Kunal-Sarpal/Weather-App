@@ -100,5 +100,5 @@ Want to improve this project? Feel free to **fork**, **create a branch**, and **
 ---
 
 ## 📱 Contact
-For any queries, reach out at [your-email@example.com](mailto:sarpalkunal7@gmail.com).
+For any queries, reach out at (mailto:sarpalkunal7@gmail.com).
 
