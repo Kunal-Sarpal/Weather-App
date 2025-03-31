@@ -1,11 +1,10 @@
 import React from 'react'
+import { toast } from 'react-toastify'
 
 const ErrorMsg = ({msg}) => {
   return (
     <div>
-        <div className=' absolute  top-2  right-4 w-fit px-4 rounded py-2 border-2 text-red-500 font-normal border-red-500 bg-red-200'>
-            {msg}
-        </div>
+            {toast.error(msg)}
     </div>
   )
 }

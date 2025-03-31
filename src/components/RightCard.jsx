@@ -12,7 +12,7 @@ const RightCard = () => {
     const msg = useSelector((state) => state.data.msg);
 
  
-
+   // It will Filter response before sending the request to server
     function filterResponse(cityName) {
         const invalidChars = /[0-9]/;
         if (cityName.trim() === "" || cityName.length > 10 || invalidChars.test(cityName) || cityName[0] == cityName[1]) {
