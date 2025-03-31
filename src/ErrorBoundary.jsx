@@ -2,7 +2,6 @@ import React from "react";
 
 
 // Here i have use class component because if like server will down or any error will occur then we can use this component to show error to user it will not let the website down
-// .
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -26,7 +25,7 @@ class ErrorBoundary extends React.Component {
         if (this.state.hasError) {
             return (
                 <div className="p-5 bg-red-100 text-red-700 border border-red-700 rounded-md text-center max-w-md mx-auto font-sans mt-5">
-                    <h2 className="text-lg font-semibold mb-2">Oops! Something went wrong.</h2>
+                    <h2 className="text-lg font-semibold mb-2">Kindly please try again after few seconds</h2>
                     <p className="text-sm">{this.state.error?.toString()}</p>
                     <button
                         onClick={this.handleRetry}
