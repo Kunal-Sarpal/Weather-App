@@ -25,10 +25,9 @@ const Home = () => {
         if (error === ("Request failed with status code 404")){
             toast.error("Invalid city name");
         }
-        else{
+        else if(error != null){
             toast.error("Something went wrong");
         }
-        
     }, [error]);
     return (
 
