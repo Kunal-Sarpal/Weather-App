@@ -1,6 +1,6 @@
 # Weather App ☂️
 
-This is a weather application built with **React, Redux, and Tailwind CSS** that fetches and displays weather information for different cities. The app saves recent searches using `localStorage` and a **queue data structure** to maintain the last 5 searches. It also includes error handling for invalid inputs and API failures.
+This is a weather application built with **React, Redux, and Tailwind CSS** that fetches and displays weather information for different cities. The app saves recent searches using `localStorage` and a **queue data structure** to maintain the last 5 searches. It also includes error handling for invalid inputs and API failures added Error Boundaries.
 
 ## Features 🚀
 - **Real-time weather data** from OpenWeatherMap API
