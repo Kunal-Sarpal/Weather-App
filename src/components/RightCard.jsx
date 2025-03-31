@@ -34,6 +34,7 @@ const RightCard = () => {
     // if city name will invalid 
     useEffect(() => {
         if (visible) {
+            setVisible(false);
             toast.error("Invalid city name");
         }
     }, [visible]);
