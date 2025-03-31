@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncGetData } from "../store/actions/getData";
-import Card from "./Card"; 
-import ErrorMsg from "./ErrorMsg";
+import Card from "./Card";
+import { toast } from "react-toastify";
 
 const RightCard = () => {
     const [city, setCity] = useState("Delhi");
@@ -11,11 +11,11 @@ const RightCard = () => {
     const dispatch = useDispatch();
     const msg = useSelector((state) => state.data.msg);
 
- 
-   // It will Filter response before sending the request to server
+
+    // It will Filter response before sending the request to server
     function filterResponse(cityName) {
         const invalidChars = /[0-9]/;
-        if (cityName.trim() === "" || cityName.length > 10 || invalidChars.test(cityName) || cityName[0] == cityName[1]) {
+        if (cityName.trim() === "" || cityName.length > 10 || invalidChars.test(cityName) || cityName[0] == cityName[1] || cityName.length == 2) {
             setVisible(true);
         } else {
             setVisible(false);
@@ -23,16 +23,23 @@ const RightCard = () => {
             dispatch(asyncGetData(cityName));
         }
     }
-
+    
+    // this hook will get items from local storage and set it to recentData
     useEffect(() => {
         const prevdata = localStorage.getItem('recentSearches')
         const convertedData = JSON.parse(prevdata);
         setRecentData(convertedData);
-    },[city])
+    }, [city])
 
+    // if city name will invalid 
+    useEffect(() => {
+        if (visible) {
+            toast.error("Invalid city name");
+        }
+    }, [visible]);
     return (
         <div className="lg:w-1/2  h-full lg:p-2 flex flex-col items-center">
-           
+
             {/*  This is navbar  */}
             <div className="flex relative scale-90 w-full mt-10 md:mt-0">
                 <input
@@ -50,9 +57,6 @@ const RightCard = () => {
                 </button>
             </div>
 
-            {/* Before sending request to api we will filter the input */}
-            {visible && <ErrorMsg msg={"Invalid city name"}/>}
-
 
             {/* Interactive message will be shown here */}
             <div className="text-3xl mt-2 text-zinc-800 tracking-tight font-extrabold px-8">
@@ -63,11 +67,11 @@ const RightCard = () => {
             {/* Past serached cities. */}
             <div className="mt-4 w-full">
                 <h2 className="text-lg font-semibold text-blue-500  pl-8 ">Recent Searches</h2>
-                    <div className="flex flex-wrap scale-75 w-fit">
+                <div className="flex flex-wrap scale-75 w-fit">
                     {recentData.map((data, index) => (
                         <Card key={index} name={data.city} value={data.weather.main.temp} symbol={"°C"} icon={data.weather.weather[0].icon} />
-                        ))}
-                    </div>
+                    ))}
+                </div>
             </div>
 
             <button
