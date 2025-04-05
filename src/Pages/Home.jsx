@@ -38,7 +38,6 @@ const Home = () => {
             data && <div className="w-full pt-20 lg:pt-20 lg:p-20 h-screen  bg-[#E9E9E9] relative  shadow-black select-none">
                    {/* Display date and time on screen */}
                     <DateAndTime />         
-                    {/* If user enters invalid city then this error pop up */}
                     <div className="w-full h-full shadow-xl shadow-zinc-300">
                         <div className="w-full lg:flex h-full bg-white items-center rounded">
                             {/*  Left side of homepage where cards have been displayed */}
